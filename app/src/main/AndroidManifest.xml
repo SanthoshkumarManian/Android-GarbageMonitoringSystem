@@ -45,7 +45,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.Garbage.map.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
 
         <activity
@@ -58,9 +58,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Navigation" />
+        <activity android:name=".menuNavigation.ClientNavigation" />
         <activity
-            android:name=".AdminNavi"
+            android:name=".menuNavigation.AdminNavi"
             android:label="Admin" >
 
         </activity>

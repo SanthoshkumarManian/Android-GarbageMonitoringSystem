@@ -1,7 +1,6 @@
-package com.Garbage;
+package com.Garbage.client;
 
 import android.annotation.SuppressLint;
-import android.app.DownloadManager;
 import android.content.res.ColorStateList;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
@@ -19,39 +18,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.lang.String;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.Response.Listener;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.firebase.client.Firebase;
-import java.lang.String;
-
+import com.Garbage.MainActivity;
+import com.Garbage.R;
+import com.Garbage.Util.Utils;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
-import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.json.JSONObject;
-import org.json.JSONException;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.android.volley.VolleyLog.TAG;
+import com.Garbage.customtoast.CustomToast;
 
-public class SignUp_Fragment extends Fragment implements OnClickListener {
+public class SignUpFragment extends Fragment implements OnClickListener {
     private static View view;
     private static EditText fullName, emailId, mobileNumber, location,
             password, confirmPassword;

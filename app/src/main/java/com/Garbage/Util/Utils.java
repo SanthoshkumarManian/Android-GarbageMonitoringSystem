@@ -1,4 +1,4 @@
-package com.Garbage;
+package com.Garbage.Util;
 
 public class Utils {
 	

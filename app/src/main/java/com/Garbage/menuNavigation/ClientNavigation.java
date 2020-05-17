@@ -1,14 +1,7 @@
-package com.Garbage;
+package com.Garbage.menuNavigation;
 import android.content.Intent;
 import android.os.Bundle;
-import com.Garbage.MainActivity.*;
-import android.support.constraint.Constraints;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -17,16 +10,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
-import com.google.android.gms.maps.MapFragment;
+import com.Garbage.binstatus.BinStatusFragment;
+import com.Garbage.map.MapsActivity;
+import com.Garbage.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
-public class Navigation extends AppCompatActivity
+public class ClientNavigation extends AppCompatActivity
             implements NavigationView.OnNavigationItemSelectedListener {
     private static FragmentManager fragmentManager;
     private FirebaseAuth mAuth;
@@ -101,13 +94,13 @@ public class Navigation extends AppCompatActivity
 
             switch (item.getItemId()) {
                 case R.id.map:
-                    Intent ma=new Intent(Navigation.this,MapsActivity.class);
+                    Intent ma=new Intent(ClientNavigation.this, MapsActivity.class);
                     startActivity(ma);
 
                     break;
 
                 case R.id.Binstatus:
-                      fragmentManager.beginTransaction().replace(R.id.frameContainer,new FragmentBinStatus()).commit();
+                      fragmentManager.beginTransaction().replace(R.id.frameContainer,new BinStatusFragment()).commit();
                     break;
 
 

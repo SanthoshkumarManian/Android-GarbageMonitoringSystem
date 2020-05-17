@@ -1,4 +1,4 @@
-package com.Garbage;
+package com.Garbage.menuNavigation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.Garbage.binstatus.BinStatusFragment;
+import com.Garbage.map.MapsActivity;
+import com.Garbage.R;
+import com.Garbage.client.SignUpFragment;
 
 
 public class AdminNavi extends AppCompatActivity
@@ -89,7 +94,7 @@ public class AdminNavi extends AppCompatActivity
             case R.id.Binstatus:
                 //fragmentManager.beginTransaction().replace(R.id.frameContainer,new Bin()).commit();
 
-                fragmentManager.beginTransaction().replace(R.id.frameContainer, new FragmentBinStatus()).commit();
+                fragmentManager.beginTransaction().replace(R.id.frameContainer, new BinStatusFragment()).commit();
                 break;
 
             case R.id.map:
@@ -99,7 +104,7 @@ public class AdminNavi extends AppCompatActivity
                 break;
 
             case R.id.Registration:
-                fragmentManager.beginTransaction().replace(R.id.frameContainer, new SignUp_Fragment()).commit();
+                fragmentManager.beginTransaction().replace(R.id.frameContainer, new SignUpFragment()).commit();
                 break;
         }
 

@@ -1,4 +1,4 @@
-package com.Garbage;
+package com.Garbage.client;
 
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
@@ -14,6 +14,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.Garbage.MainActivity;
+import com.Garbage.R;
+import com.Garbage.Util.Utils;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,8 +24,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.Garbage.customtoast.CustomToast;
 
-public class ForgotPassword_Fragment extends Fragment implements
+
+public class ForgotPasswordFragment extends Fragment implements
         OnClickListener {
     private static View view;
 
@@ -31,7 +36,7 @@ public class ForgotPassword_Fragment extends Fragment implements
 
     private FirebaseAuth mAuth;
 
-    public ForgotPassword_Fragment() {
+    public ForgotPasswordFragment() {
 
     }
 

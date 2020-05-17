@@ -1,4 +1,4 @@
-package com.Garbage;
+package com.Garbage.binstatus;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -28,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.Garbage.R;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
@@ -40,7 +41,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class FragmentBinStatus extends Fragment {
+public class BinStatusFragment extends Fragment {
     private ProgressBar mProgressBar;
     private int mProgressStatus = 0;
 

@@ -8,7 +8,7 @@
     android:background="@color/white"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".AdminNavi">
+    tools:context=".menuNavigation.AdminNavi">
 
     <TextView
         android:layout_width="wrap_content"

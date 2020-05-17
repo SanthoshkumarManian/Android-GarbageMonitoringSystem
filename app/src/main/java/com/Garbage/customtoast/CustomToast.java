@@ -1,4 +1,4 @@
-package com.Garbage;
+package com.Garbage.customtoast;
 
 import android.content.Context;
 import android.view.Gravity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.Garbage.R;
 
 
 public class CustomToast {

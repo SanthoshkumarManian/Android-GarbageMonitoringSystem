@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.Garbage.Util.Utils;
+import com.Garbage.client.ClientFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             fragmentManager
                     .beginTransaction()
-                    .replace(R.id.frameContainer, new Login_Fragment(),
+                    .replace(R.id.frameContainer, new ClientFragment(),
                             Utils.Login_Fragment).commit();
         }
 
@@ -43,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Replace Login Fragment with animation
-    protected void replaceLoginFragment() {
+    public void replaceLoginFragment() {
         fragmentManager
                 .beginTransaction()
                 .setCustomAnimations(R.anim.left_enter, R.anim.right_out)
-                .replace(R.id.frameContainer, new Login_Fragment(),
+                .replace(R.id.frameContainer, new ClientFragment(),
                         Utils.Login_Fragment).commit();
     }
 
